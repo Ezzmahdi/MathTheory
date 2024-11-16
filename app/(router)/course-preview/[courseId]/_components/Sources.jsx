@@ -65,13 +65,34 @@ function Sources() {
                 id:2,
                 name:'Book',
                 icon:'/web-design.png',
-                url:'https://homel.vsb.cz/~ulc0011/Abbott%20-%20Understanding%20Analysis.pdf'
+                url:''
             },
             {
                 id:3,
                 name:'Youtube',
                 icon:'/youtube.png',
                 url:'https://www.youtube.com/playlist?list=PL0-GT3co4r2wlh6UHTUeQsrf3mlS2lk6x'
+            },
+        ]
+    } else if (lastSegment == 'PointSetTopology') {
+        optionsList=[
+            {
+                id:1,
+                name:'Notes',
+                icon:'/open-source.png',
+                url:'https://www.math.utoronto.ca/ivan/mat327/?resources '
+            },
+            {
+                id:2,
+                name:'Book',
+                icon:'/web-design.png',
+                url:''
+            },
+            {
+                id:3,
+                name:'Youtube',
+                icon:'/youtube.png',
+                url:'https://www.youtube.com/playlist?list=PLqObMWX4M-Id2bgMBX_cVDKAVebL_pqMu'
             },
         ]
     }
