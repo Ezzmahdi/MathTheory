@@ -6,6 +6,7 @@ function ConstructingRationalNumbers() {
   return (
     <div className="prose max-w-none p-4">
       <h2 className="text-2xl font-semibold">Chapter 1: Constructing <InlineMath math="\mathbb{Q}" /></h2>
+      <hr className="my-4" />
 
       <h4 className="text-lg font-semibold mt-4">Introduction: The Problem with Fractions</h4>
       <p>

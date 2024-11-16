@@ -4,8 +4,9 @@ import 'katex/dist/katex.min.css';
 
 function RationalNumbersProperties() {
   return (
-    <div className="prose max-w-none mx-auto my-8">
+    <div className="prose max-w-none p-4">
       <h2 className="text-2xl font-semibold mb-4">Chapter 2: The Rational Numbers and Their Properties</h2>
+      <hr className="my-4" />
 
       <h3 className="text-xl font-semibold mb-2">Introduction to Rational Numbers and Their Order</h3>
       <p>
@@ -14,6 +15,7 @@ function RationalNumbersProperties() {
       <p>
         Consider the numbers <InlineMath math="0" />, <InlineMath math="1" />, <InlineMath math="2" />, and others in a specific order. For example, <InlineMath math="\frac{12}{12}" /> is less than <InlineMath math="\frac{13}{13}" />, so it belongs here in the list, and we can observe that <InlineMath math="\frac{1}{4}" /> lies between <InlineMath math="0" /> and <InlineMath math="1" /> in the order. Similarly, numbers like <InlineMath math="\frac{54}{2}" /> and <InlineMath math="-\frac{43}{1}" /> fit into this structure. There are, of course, infinitely many rational numbers between any two numbers, and we will explore this idea further in upcoming lectures.
       </p>
+      <hr className="my-4" />
 
       <h3 className="text-xl font-semibold mt-6 mb-2">Using Rational Numbers to Solve Practical Problems</h3>
       <p>
@@ -27,6 +29,7 @@ function RationalNumbersProperties() {
         By using the cross-multiplication rule learned in basic arithmetic, we can see that multiplying both sides of the equation by 5 results in:
       </p>
       <BlockMath math="x = \frac{3}{5}" />
+      <hr className="my-4" />
 
       <h3 className="text-xl font-semibold mt-6 mb-2">The Limitations of Rational Numbers</h3>
       <p>
@@ -36,6 +39,7 @@ function RationalNumbersProperties() {
       <p>
         We claim that there is no rational solution to this equation. To prove this, we use a classic proof by contradiction. The idea behind a proof by contradiction is that we assume the opposite of what we want to prove and show that this assumption leads to a contradiction, which means the original assumption must be true.
       </p>
+      <hr className="my-4" />
 
       <h4 className="text-lg font-semibold mt-4">Proof by Contradiction</h4>
       <p>
@@ -64,6 +68,7 @@ function RationalNumbersProperties() {
       <p>
         Thus, <InlineMath math="x^2 = 2" /> has no solution in the rational numbers <InlineMath math="\mathbb{Q}" />. This demonstrates that the rational numbers are not complete enough to solve all equations, such as the square root of 2.
       </p>
+      <hr className="my-4" />
 
       <h3 className="text-xl font-semibold mt-6 mb-2">The Structure of the Rational Numbers</h3>
       <p>
@@ -98,6 +103,7 @@ function RationalNumbersProperties() {
           <strong>Distributivity</strong>: Multiplication distributes over addition, meaning <InlineMath math="a \times (b + c) = a \times b + a \times c" />.
         </li>
       </ol>
+      <hr className="my-4" />
 
       <h3 className="text-xl font-semibold mt-6 mb-2">Conclusion: Why <InlineMath math="\mathbb{Q}" /> is Not a Field for Everything</h3>
       <p>

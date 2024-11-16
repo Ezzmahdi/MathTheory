@@ -4,7 +4,7 @@ import 'katex/dist/katex.min.css';
 export default function Induction() {
   return (
     <section className="space-y-8">
-      <h1 className="text-2xl font-bold mt-4">Chapter 6: Mastering Mathematical Induction</h1>
+      <h3 className="text-xl font-bold mt-4">Chapter 6: Mastering Mathematical Induction</h3>
 
       <p className="text-lg">
         In this chapter, we'll dive deeper into <strong>mathematical induction</strong>, a powerful tool in proving statements about integers. We'll start with a clear explanation of how induction works, explore common pitfalls, and then move on to advanced techniques and examples.

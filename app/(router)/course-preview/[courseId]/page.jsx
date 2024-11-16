@@ -41,6 +41,10 @@ import HeinBorelTheom from './_components/_realAnalysis/Chapter13'
 import CantorSets from './_components/_realAnalysis/Chapter14'
 import ConvergenceInRealAnalysis from './_components/_realAnalysis/Chapter15'
 import SequentialCompactness from './_components/_realAnalysis/Chapter16'
+import Completespaces from './_components/_realAnalysis/Chapter17'
+import Extra from './_components/_realAnalysis/Extra'
+import Series from './_components/_realAnalysis/Chapter18'
+import AbsoluteConvergance from './_components/_realAnalysis/Chapter19'
 
 
 function CoursePreview() {
@@ -70,7 +74,7 @@ function CoursePreview() {
         imageurl:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn9z0LqkEI-dg0c7hwWabMsw91fOQZGFbVzg&s',
         description: "🚀 **Course Description**: Unlock the power of vector mathematics in this comprehensive course designed to demystify cross products. Whether you’re a student, engineer, or just curious about how vectors work in the real world, this course will guide you step by step through 2D and 3D spaces. 🧑‍🏫 We’ll start with 2D geometry, using cross products to calculate areas and understand orientations, then advance to 3D, where you’ll learn to find perpendicular vectors and solve complex geometric problems. ✍️ With intuitive explanations, interactive visualizations, and hands-on exercises, you’ll master vector properties, the right-hand rule 🖐️, and determinants, while exploring real-world applications in physics, engineering, and computer graphics. By the end, you’ll be confident tackling advanced problems, no advanced math experience needed! Perfect for students, professionals, and anyone curious about space and motion. 🌟",
         mediumUrl: "",
-        chapter:["Introduction to the course","Construction of Q","Properties of Q","Construction of Reals","Least Upper Bound Property","Construction of Complex","Induction","Countability and Cardinality","Cantor Diagonalization and Metric Spaces","Open and Closed Sets in Metric Spaces","Limit Points","Compact Sets","Compactness and Related Theorems","Heine-Borel Theorem","Cantor Sets","Convergence  of a sequence","Sequential Compactness"],
+        chapter:["Introduction to the course","Construction of Q","Properties of Q","Construction of Reals","Least Upper Bound Property","Construction of Complex","Induction","Countability and Cardinality","Cantor Diagonalization and Metric Spaces","Open and Closed Sets in Metric Spaces","Limit Points","Compact Sets","Compactness and Related Theorems","Heine-Borel Theorem","Cantor Sets","Convergence  of a sequence","Sequential Compactness","Extra: Cuachy Sequences","Complete Spaces","Series","Absolute Convergence"],
       }
     } else if (lastSegment == 'Calculus') {
       courseInfo = {
@@ -136,6 +140,11 @@ function CoursePreview() {
        {lastSegment == 'RealAnalysis' && activeChapterIndex === 14 && (<CantorSets/>)}
        {lastSegment == 'RealAnalysis' && activeChapterIndex === 15 && (<ConvergenceInRealAnalysis/>)}
        {lastSegment == 'RealAnalysis' && activeChapterIndex === 16 && (<SequentialCompactness/>)}
+       {lastSegment == 'RealAnalysis' && activeChapterIndex === 17 && (<Extra/>)}
+       {lastSegment == 'RealAnalysis' && activeChapterIndex === 18 && (<Completespaces/>)}
+       {lastSegment == 'RealAnalysis' && activeChapterIndex === 19 && (<Series/>)}
+       {lastSegment == 'RealAnalysis' && activeChapterIndex === 20 && (<AbsoluteConvergance/>)}
+
 
        </div>
 
