@@ -45,6 +45,13 @@ import Completespaces from './_components/_realAnalysis/Chapter17'
 import Extra from './_components/_realAnalysis/Extra'
 import Series from './_components/_realAnalysis/Chapter18'
 import AbsoluteConvergance from './_components/_realAnalysis/Chapter19'
+import LimitsAndContinuity from './_components/_realAnalysis/Chapter20'
+import ContinuousFunctions from './_components/_realAnalysis/Chapter21'
+import UniformContinuityChapter from './_components/_realAnalysis/Chapter22'
+import DiscontinuitiesChapter from './_components/_realAnalysis/Chapter23'
+import DifferentiationChapter from './_components/_realAnalysis/Chapter24'
+import TaylorsTheoremChapter from './_components/_realAnalysis/Chapter25'
+import OrdinalsChapter from './_components/_realAnalysis/Chapter26'
 
 
 function CoursePreview() {
@@ -72,9 +79,9 @@ function CoursePreview() {
         name:'Real Analysis Course',
         chapters:'26',
         imageurl:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn9z0LqkEI-dg0c7hwWabMsw91fOQZGFbVzg&s',
-        description: "🚀 **Course Description**: Unlock the power of vector mathematics in this comprehensive course designed to demystify cross products. Whether you’re a student, engineer, or just curious about how vectors work in the real world, this course will guide you step by step through 2D and 3D spaces. 🧑‍🏫 We’ll start with 2D geometry, using cross products to calculate areas and understand orientations, then advance to 3D, where you’ll learn to find perpendicular vectors and solve complex geometric problems. ✍️ With intuitive explanations, interactive visualizations, and hands-on exercises, you’ll master vector properties, the right-hand rule 🖐️, and determinants, while exploring real-world applications in physics, engineering, and computer graphics. By the end, you’ll be confident tackling advanced problems, no advanced math experience needed! Perfect for students, professionals, and anyone curious about space and motion. 🌟",
+        description: "This course simplifies complex topics in real analysis, set theory, and topology, making them easy to grasp. You'll explore the construction of numbers like Q, R, and C 🧮, dive into key properties, and understand essential concepts like induction 🧠, convergence 🔄, and continuity 🌱. Important theorems like compactness 🌍, Taylor's theorem 📏, and the Least Upper Bound property will be explained in a way that shows their real-world significance. You'll also learn about metric spaces, differentiation ✏️, and Cauchy sequences 🔍, all while developing the skills needed to approach advanced mathematical challenges. By the end of this course, you'll have a solid understanding of core mathematical principles that will boost your confidence in tackling more complex topics.",
         mediumUrl: "",
-        chapter:["Introduction to the course","Construction of Q","Properties of Q","Construction of Reals","Least Upper Bound Property","Construction of Complex","Induction","Countability and Cardinality","Cantor Diagonalization and Metric Spaces","Open and Closed Sets in Metric Spaces","Limit Points","Compact Sets","Compactness and Related Theorems","Heine-Borel Theorem","Cantor Sets","Convergence  of a sequence","Sequential Compactness","Extra: Cuachy Sequences","Complete Spaces","Series","Absolute Convergence"],
+        chapter:["Introduction to the course","Construction of Q","Properties of Q","Construction of Reals","Least Upper Bound Property","Construction of Complex","Induction","Countability and Cardinality","Cantor Diagonalization and Metric Spaces","Open and Closed Sets in Metric Spaces","Limit Points","Compact Sets","Compactness and Related Theorems","Heine-Borel Theorem","Cantor Sets","Convergence  of a sequence","Sequential Compactness","Extra: Cuachy Sequences","Complete Spaces","Series","Absolute Convergence","Limits and Continuity","Continuous Functions","Uniform Continuity", "Discontinuities","Differentiation","Taylor Theorem","Ordinal Numbers & Transfinite Induction"],
       }
     } else if (lastSegment == 'Calculus') {
       courseInfo = {
@@ -82,7 +89,7 @@ function CoursePreview() {
         name:'Calculus 1 Course',
         chapters:'11',
         imageurl:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmQMCGTs84eeQh9OQtWGz8CIv23Thee10H2g&s',
-        description: "🚀 **Course Description**: Unlock the power of vector mathematics in this comprehensive course designed to demystify cross products. Whether you’re a student, engineer, or just curious about how vectors work in the real world, this course will guide you step by step through 2D and 3D spaces. 🧑‍🏫 We’ll start with 2D geometry, using cross products to calculate areas and understand orientations, then advance to 3D, where you’ll learn to find perpendicular vectors and solve complex geometric problems. ✍️ With intuitive explanations, interactive visualizations, and hands-on exercises, you’ll master vector properties, the right-hand rule 🖐️, and determinants, while exploring real-world applications in physics, engineering, and computer graphics. By the end, you’ll be confident tackling advanced problems, no advanced math experience needed! Perfect for students, professionals, and anyone curious about space and motion. 🌟",
+        description: "",
         mediumUrl: "",
         chapter:["Introduction to the course","Chapter 1:","Chapter 3","Chapter 4","Chapter 5"],
       }
@@ -92,9 +99,9 @@ function CoursePreview() {
         name:'Point Set Topology Course',
         chapters:'19',
         imageurl:'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQgBTqd_24nYJwcMRgjE4rKSQSg_EyfCehEjFf5S55j66Xq_j85NYPSZw8zxqXzOvPLG5f5eTZOZcr75Ft_ST1jzKR4TuPgh9LwP4Q_stYFv9XqPMTgXWwVAsmEPFq40zfIKO7H5N5x_WBTGap6-_Y5oszXtb0LpWt6AIkbu0T9aTtQrtyWD_JDATFbGY/s400/Screenshot%202023-12-12%20024120.png',
-        description: "🚀 **Course Description**: Unlock the power of vector mathematics in this comprehensive course designed to demystify cross products. Whether you’re a student, engineer, or just curious about how vectors work in the real world, this course will guide you step by step through 2D and 3D spaces. 🧑‍🏫 We’ll start with 2D geometry, using cross products to calculate areas and understand orientations, then advance to 3D, where you’ll learn to find perpendicular vectors and solve complex geometric problems. ✍️ With intuitive explanations, interactive visualizations, and hands-on exercises, you’ll master vector properties, the right-hand rule 🖐️, and determinants, while exploring real-world applications in physics, engineering, and computer graphics. By the end, you’ll be confident tackling advanced problems, no advanced math experience needed! Perfect for students, professionals, and anyone curious about space and motion. 🌟",
+        description: "",
         mediumUrl: "",
-        chapter:["Introduction to the course","Chapter 1:","Chapter 3","Chapter 4","Chapter 5"],
+        chapter:[ "Introduction", "A Start", "Bases of topologies", "Closed sets and closures", "Countability", "Sequences, weak T-axioms, and first countability", "Continuity and homeomorphisms", "Subspaces", "Finite products", "Stronger separation axioms", "Orders and omega_1", "The Axiom of Choice and Zorn's Lemma", "Metric spaces and metrizability", "Urysohn's Lemma", "Arbitrary products", "The Urysohn Metrization Theorem", "Compactness", "Tychonoff's Theorem, and some properties related to compactness", "Connectedness", "Compactifications"],
       }
     }
     
@@ -144,6 +151,13 @@ function CoursePreview() {
        {lastSegment == 'RealAnalysis' && activeChapterIndex === 18 && (<Completespaces/>)}
        {lastSegment == 'RealAnalysis' && activeChapterIndex === 19 && (<Series/>)}
        {lastSegment == 'RealAnalysis' && activeChapterIndex === 20 && (<AbsoluteConvergance/>)}
+       {lastSegment == 'RealAnalysis' && activeChapterIndex === 21 && (<LimitsAndContinuity/>)}
+       {lastSegment == 'RealAnalysis' && activeChapterIndex === 22 && (<ContinuousFunctions/>)}
+       {lastSegment == 'RealAnalysis' && activeChapterIndex === 23 && (<UniformContinuityChapter/>)}
+       {lastSegment == 'RealAnalysis' && activeChapterIndex === 24 && (<DiscontinuitiesChapter/>)}
+       {lastSegment == 'RealAnalysis' && activeChapterIndex === 25 && (<DifferentiationChapter/>)}
+       {lastSegment == 'RealAnalysis' && activeChapterIndex === 26 && (<TaylorsTheoremChapter/>)}
+       {lastSegment == 'RealAnalysis' && activeChapterIndex === 27 && (<OrdinalsChapter/>)}
 
 
        </div>
