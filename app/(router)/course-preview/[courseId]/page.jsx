@@ -54,6 +54,14 @@ import TaylorsTheoremChapter from './_components/_realAnalysis/Chapter25'
 import OrdinalsChapter from './_components/_realAnalysis/Chapter26'
 
 
+
+import StartTopology from './_components/_Topology/Chapter1'
+import BasesTopologies from './_components/_Topology/Chapter2'
+import Closures from './_components/_Topology/Chapter3'
+import Chapter4Countability from './_components/_Topology/Chapter4'
+import SequencesChapter5 from './_components/_Topology/Chapter5'
+
+
 function CoursePreview() {
 
     const pathname = usePathname();
@@ -159,6 +167,11 @@ function CoursePreview() {
        {lastSegment == 'RealAnalysis' && activeChapterIndex === 26 && (<TaylorsTheoremChapter/>)}
        {lastSegment == 'RealAnalysis' && activeChapterIndex === 27 && (<OrdinalsChapter/>)}
 
+       {lastSegment == 'PointSetTopology' && activeChapterIndex === 1 && (<StartTopology/>)}
+       {lastSegment == 'PointSetTopology' && activeChapterIndex === 2 && (<BasesTopologies/>)}
+       {lastSegment == 'PointSetTopology' && activeChapterIndex === 3 && (<Closures/>)}
+       {lastSegment == 'PointSetTopology' && activeChapterIndex === 4 && (<Chapter4Countability/>)}
+       {lastSegment == 'PointSetTopology' && activeChapterIndex === 5 && (<SequencesChapter5/>)}
 
        </div>
 

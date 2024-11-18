@@ -1,0 +1,193 @@
+import { InlineMath } from 'react-katex';
+import 'katex/dist/katex.min.css';
+
+export default function SequencesChapter5() {
+  return (
+    <div className="p-6 bg-white rounded-lg shadow-md">
+      <h2 className="text-2xl font-bold mb-4">Chapter 5: Sequences, Weak T-Axioms, and First Countability</h2>
+      <hr className="my-6" />
+
+      <h3 className="text-xl font-semibold mt-6">1. Motivation</h3>
+      <p>
+        Before we delve into more abstract definitions and results, let's start with the broader picture.
+        Throughout earlier chapters, we have been intuitively working with the concept of sequence convergence, especially
+        in familiar spaces like <InlineMath math="\mathbb{R}^n" />. However, we've largely relied on our intuition rather than
+        formal definitions. This chapter aims to fill that gap by providing a rigorous way to define sequence convergence in
+        any topological space, not just <InlineMath math="\mathbb{R}^n" />.
+      </p>
+      <p>
+        To illustrate the importance of defining sequence convergence more rigorously, consider a common result from earlier exercises,
+        such as the <strong>Big List problem</strong>. This problem asked whether a point <InlineMath math="x" /> belongs to the closure
+        of a set <InlineMath math="A \subset \mathbb{R}^n" /> if and only if there is a sequence in <InlineMath math="A" /> that converges
+        to <InlineMath math="x" />. This result made sense in the context of Euclidean space, but what happens in other topological spaces?
+        What properties of the Euclidean topology ensure this result holds? In this chapter, we will uncover that the answer depends
+        on the specific properties of the topology we are dealing with.
+      </p>
+      <hr className="my-6" />
+
+      <h3 className="text-xl font-semibold mt-6">2. Convergence of Sequences</h3>
+      <p>
+        Let's begin by laying down the formal definition of sequence convergence in any topological space.
+      </p>
+      <p>
+        A sequence is a function from the natural numbers, <InlineMath math="\mathbb{N}" />, to a set <InlineMath math="X" />. For convenience,
+        we write sequences as <InlineMath math="\{x_n\}_{n=1}^\infty" /> or simply <InlineMath math="\{x_n\}" />, where <InlineMath math="n" />
+        represents the index of the sequence, and each <InlineMath math="x_n \in X" /> is a point in the set.
+      </p>
+      <hr className="my-6" />
+
+      <h4 className="text-lg font-semibold mt-4">Definition 2.1 (Convergence of Sequences):</h4>
+      <p>
+        Let <InlineMath math="(X, T)" /> be a topological space, where <InlineMath math="T" /> denotes the topology on <InlineMath math="X" />.
+        A sequence <InlineMath math="\{x_n\}_{n=1}^\infty" /> converges to a point <InlineMath math="x \in X" /> if, for every open set <InlineMath math="U" />
+        containing <InlineMath math="x" />, there exists an integer <InlineMath math="N" /> such that for all <InlineMath math="n > N" />, the points
+        of the sequence <InlineMath math="x_n" /> lie inside <InlineMath math="U" />.
+      </p>
+      <p>
+        Formally, we write this as:
+        <br />
+        <InlineMath math="\lim_{n \to \infty} x_n = x \quad \text{or} \quad x_n \to x \text{ as } n \to \infty." />
+      </p>
+      <p>
+        This definition means that, as we progress further into the sequence (as <InlineMath math="n" /> gets larger), the terms of the sequence
+        eventually stay within any open neighborhood of <InlineMath math="x" />. In simple terms, for any open set that contains <InlineMath math="x" />,
+        the sequence will eventually be contained within that set as well.
+      </p>
+      <hr className="my-6" />
+
+      <h4 className="text-lg font-semibold mt-4">Remark 2.2:</h4>
+      <p>
+        In practice, when we consider convergence in topological spaces, we typically don't need to check all open sets. It suffices to check
+        the basic open sets that form a basis for the topology. This simplification makes the concept of sequence convergence easier to handle.
+      </p>
+      <hr className="my-6" />
+
+      <h3 className="text-xl font-semibold mt-6">3. Examples of Sequence Convergence</h3>
+      <p>
+        Let's see how this definition of convergence plays out in various topological spaces, including some that may behave in surprising ways.
+      </p>
+      <ol className="list-decimal pl-8 mt-4">
+        <li>
+          <strong>In the Usual Topology on <InlineMath math="\mathbb{R}" />:</strong>
+          <p>
+            In the standard topology on the real numbers, a sequence such as <InlineMath math="\frac{1}{n} \to 0" /> is a typical example of convergence.
+            The terms of the sequence get closer and closer to zero as <InlineMath math="n" /> increases. The terms will eventually stay within any
+            open interval around 0.
+          </p>
+          <p>
+            However, in the <strong>Sorgenfrey line</strong>, where open sets are generated by intervals of the form <InlineMath math="[a, b)" />
+            (half-open intervals), the sequence <InlineMath math="\frac{1}{n}" /> does <strong>not</strong> converge to zero. In this case, the open set
+            <InlineMath math="[0, 1)" /> is open and contains 0, but it contains no terms of the sequence, making it impossible for the sequence to
+            converge to 0.
+          </p>
+        </li>
+        <li>
+          <strong>Trivial Sequences:</strong>
+          <p>
+            A constant sequence, where every term is the same, converges to that constant value in any topological space. For example, if
+            <InlineMath math="x_n = x" /> for all <InlineMath math="n" />, then <InlineMath math="\lim_{n \to \infty} x_n = x" />, regardless of the
+            topology on <InlineMath math="X" />.
+          </p>
+        </li>
+        <li>
+          <strong>In Discrete Spaces:</strong>
+          <p>
+            In a discrete space, every singleton set is an open set, meaning that if a sequence <InlineMath math="\{x_n\}" /> converges to some point
+            <InlineMath math="x" />, then after some point, all terms of the sequence must be exactly equal to <InlineMath math="x" />. This makes
+            the convergence of sequences in discrete spaces straightforward but limited to eventually constant sequences.
+          </p>
+        </li>
+        <li>
+          <strong>In the Particular Point Topology:</strong>
+          <p>
+            In the particular point topology on a set <InlineMath math="X" />, all open sets either contain a special point <InlineMath math="p" />
+            or are the entire space. Consider a sequence that alternates between some point <InlineMath math="x" /> and <InlineMath math="p" />,
+            such as <InlineMath math="\{x, p, x, p, \dots\}" />. In this case, the sequence converges to <InlineMath math="x" />, not <InlineMath math="p" />,
+            because any open set containing <InlineMath math="p" /> must eventually contain all terms of the sequence.
+          </p>
+        </li>
+        <li>
+          <strong>In the Indiscrete Topology:</strong>
+          <p>
+            In the indiscrete topology, the only open set is <InlineMath math="X" /> itself. This means that every sequence converges to every
+            point in the space because, trivially, the entire space is an open set, and the sequence will eventually be contained in it.
+          </p>
+        </li>
+        <li>
+          <strong>In the Ray Topology on <InlineMath math="\mathbb{R}" />:</strong>
+          <p>
+            The Ray Topology introduces an interesting twist, where the open sets are generated by intervals <InlineMath math="[a, \infty)" />.
+            In this topology, the sequence <InlineMath math="\frac{1}{n} \to 0" /> behaves similarly to the usual topology on <InlineMath math="\mathbb{R}" />,
+            but sequences that oscillate or exhibit more complex patterns may converge differently due to the nature of open sets.
+          </p>
+        </li>
+      </ol>
+      <hr className="my-6" />
+
+      <h3 className="text-xl font-bold mb-4">4. When is Sequence Convergence Not Weird?</h3>
+      
+      <p>
+        We've now seen that sequence convergence can behave in some strange ways depending on the topology. However, we don't want to deal with odd behaviors all the time. In this section, we'll introduce a few properties of topological spaces that help ensure that sequence convergence behaves more predictably.
+      </p>
+      <hr className="my-6" />
+
+      <h3 className="text-xl font-semibold mt-6">T0 Property</h3>
+      <p>
+        One such property is the <strong>T0 property</strong>, which guarantees that distinct points in a space can be distinguished by open sets.
+      </p>
+      <hr className="my-6" />
+
+      <h4 className="text-lg font-semibold mt-4">Definition 3.1 (T0 Space):</h4>
+      <p>
+        A topological space <InlineMath math="(X, T)" /> is T0 (also known as Kolmogorov) if for any pair of distinct points <InlineMath math="x, y \in X" />, there exists at least one open set that contains one point and not the other. This is a minimal condition ensuring that we can distinguish between distinct points using open sets.
+      </p>
+      <hr className="my-6" />
+
+      <h3 className="text-xl font-semibold mt-6">T1 Property</h3>
+      <p>
+        Next, we introduce the <strong>T1 property</strong>, which is a slightly stronger version of the T0 property.
+      </p>
+      <hr className="my-6" />
+
+      <h4 className="text-lg font-semibold mt-4">Definition 3.2 (T1 Space):</h4>
+      <p>
+        A space <InlineMath math="(X, T)" /> is T1 (or Fréchet) if for any pair of distinct points <InlineMath math="x, y \in X" />, there exist open sets <InlineMath math="U" /> containing <InlineMath math="x" /> but not <InlineMath math="y" />, and <InlineMath math="V" /> containing <InlineMath math="y" /> but not <InlineMath math="x" />. This property ensures that every point in the space can be separated from every other point by open sets.
+      </p>
+      <p>
+        In a T1 space, we can make the following observation: if a sequence <InlineMath math="x_n" /> is constant after some point, say <InlineMath math="x_n = x" /> for all <InlineMath math="n > N" />, then the sequence must converge to <InlineMath math="x" />, and not to any other point.
+      </p>
+      <hr className="my-6" />
+
+      <h4 className="text-lg font-semibold mt-4">Exercise 3.4:</h4>
+      <p>
+        Prove that in a T1 space, the constant sequence <InlineMath math="x, x, x, \dots" /> converges only to <InlineMath math="x" /> and no other point.
+      </p>
+      <hr className="my-6" />
+
+      <h3 className="text-xl font-semibold mt-6">T1 Spaces and Closed Singletons</h3>
+      <p>
+        A very nice property of T1 spaces is that every singleton set <InlineMath math="\{x\}" /> is closed. This means that for any point <InlineMath math="x" />, its corresponding set <InlineMath math="\{x\}" /> is closed in the space. This is significant because it helps simplify our understanding of sequences in such spaces.
+      </p>
+      <hr className="my-6" />
+
+      <h4 className="text-lg font-semibold mt-4">Exercise 3.5:</h4>
+      <p>
+        Show that the following are equivalent for a topological space <InlineMath math="(X, T)" />:
+      </p>
+      <ol className="list-decimal pl-8 mt-4">
+        <li><InlineMath math="(X, T)" /> is T1.</li>
+        <li>For every <InlineMath math="x \in X" />, <InlineMath math="\{x\}" /> is closed.</li>
+        <li>Every finite subset of <InlineMath math="X" /> is closed.</li>
+      </ol>
+      <hr className="my-6" />
+
+      <h3 className="text-xl font-semibold mt-6">Conclusion</h3>
+      <p>
+        In this chapter, we've taken a deep dive into the formal definition of sequence convergence in topological spaces. We also explored the different behaviors sequences can exhibit in various topologies. While spaces like discrete or indiscrete spaces are straightforward, other topologies—such as the Sorgenfrey line—introduce more complexity.
+      </p>
+      <p>
+        As we progress, we will see that stronger separation properties, such as the Hausdorff condition, provide even more control over sequence convergence, making it behave more predictably and intuitively. These concepts lay the groundwork for understanding the interaction between sequences and topological properties, which will become more important in future chapters.
+      </p>
+    </div>
+  );
+}
