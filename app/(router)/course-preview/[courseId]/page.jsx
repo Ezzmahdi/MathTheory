@@ -60,6 +60,10 @@ import BasesTopologies from './_components/_Topology/Chapter2'
 import Closures from './_components/_Topology/Chapter3'
 import Chapter4Countability from './_components/_Topology/Chapter4'
 import SequencesChapter5 from './_components/_Topology/Chapter5'
+import Continuity from './_components/_Topology/Chapter6'
+import Chapter7Subspaces from './_components/_Topology/Chapter7'
+import FiniteProducts from './_components/_Topology/Chapter8'
+import StrongerSeparationAxioms from './_components/_Topology/Chapter9'
 
 
 function CoursePreview() {
@@ -172,6 +176,10 @@ function CoursePreview() {
        {lastSegment == 'PointSetTopology' && activeChapterIndex === 3 && (<Closures/>)}
        {lastSegment == 'PointSetTopology' && activeChapterIndex === 4 && (<Chapter4Countability/>)}
        {lastSegment == 'PointSetTopology' && activeChapterIndex === 5 && (<SequencesChapter5/>)}
+       {lastSegment == 'PointSetTopology' && activeChapterIndex === 6 && (<Continuity/>)}
+       {lastSegment == 'PointSetTopology' && activeChapterIndex === 7 && (<Chapter7Subspaces/>)}
+       {lastSegment == 'PointSetTopology' && activeChapterIndex === 8 && (<FiniteProducts/>)}
+       {lastSegment == 'PointSetTopology' && activeChapterIndex === 9 && (<StrongerSeparationAxioms/>)}
 
        </div>
 
