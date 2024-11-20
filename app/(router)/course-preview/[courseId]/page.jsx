@@ -64,6 +64,8 @@ import Continuity from './_components/_Topology/Chapter6'
 import Chapter7Subspaces from './_components/_Topology/Chapter7'
 import FiniteProducts from './_components/_Topology/Chapter8'
 import StrongerSeparationAxioms from './_components/_Topology/Chapter9'
+import OrdersAndOmega from './_components/_Topology/Chapter10'
+import ZornsLemma from './_components/_Topology/Chapter11'
 
 
 function CoursePreview() {
@@ -180,6 +182,8 @@ function CoursePreview() {
        {lastSegment == 'PointSetTopology' && activeChapterIndex === 7 && (<Chapter7Subspaces/>)}
        {lastSegment == 'PointSetTopology' && activeChapterIndex === 8 && (<FiniteProducts/>)}
        {lastSegment == 'PointSetTopology' && activeChapterIndex === 9 && (<StrongerSeparationAxioms/>)}
+       {lastSegment == 'PointSetTopology' && activeChapterIndex === 10 && (<OrdersAndOmega/>)}
+       {lastSegment == 'PointSetTopology' && activeChapterIndex === 11 && (<ZornsLemma/>)}
 
        </div>
 
