@@ -66,6 +66,14 @@ import FiniteProducts from './_components/_Topology/Chapter8'
 import StrongerSeparationAxioms from './_components/_Topology/Chapter9'
 import OrdersAndOmega from './_components/_Topology/Chapter10'
 import ZornsLemma from './_components/_Topology/Chapter11'
+import MetricSpacesChapter from './_components/_Topology/Chapter12'
+import UrysohnsLemma  from './_components/_Topology/Chapter13'
+import TopologyChapter from './_components/_Topology/Chapter14'
+import UrysohnMetrizationTheorem from './_components/_Topology/Chapter15'
+import Compactness from './_components/_Topology/Chapter16'
+import TychonoffTheorem from './_components/_Topology/Chapter17'
+import Connectedness from './_components/_Topology/Chapter18'
+import CompactificationsPage from './_components/_Topology/Chapter19'
 
 
 function CoursePreview() {
@@ -103,7 +111,7 @@ function CoursePreview() {
         name:'Calculus 1 Course',
         chapters:'11',
         imageurl:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmQMCGTs84eeQh9OQtWGz8CIv23Thee10H2g&s',
-        description: "",
+        description: "This chapter is designed for students who may find math challenging but are eager to understand the beauty of Calculus. Whether you're new to the subject or just need a fresh perspective, this chapter will guide you step-by-step through key concepts, making them easy to grasp and apply. You'll learn how to understand limits, derivatives, and integrals using simple language, clear visuals, and real-life examples. With each section, you'll build confidence and gain a deeper understanding of how Calculus explains the world around us. 📈💡 Don't let complex terms hold you back—read on, and watch your skills grow! 🌱",
         mediumUrl: "",
         chapter:["Introduction to the course","Chapter 1:","Chapter 3","Chapter 4","Chapter 5"],
       }
@@ -113,7 +121,7 @@ function CoursePreview() {
         name:'Point Set Topology Course',
         chapters:'19',
         imageurl:'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQgBTqd_24nYJwcMRgjE4rKSQSg_EyfCehEjFf5S55j66Xq_j85NYPSZw8zxqXzOvPLG5f5eTZOZcr75Ft_ST1jzKR4TuPgh9LwP4Q_stYFv9XqPMTgXWwVAsmEPFq40zfIKO7H5N5x_WBTGap6-_Y5oszXtb0LpWt6AIkbu0T9aTtQrtyWD_JDATFbGY/s400/Screenshot%202023-12-12%20024120.png',
-        description: "",
+        description: "This course is your gateway to understanding key concepts in topology, focusing on one-point compactification and Stone-Čech compactification. Whether you're a student or an enthusiast, you'll learn how to transform non-compact spaces into compact ones, gaining a deep understanding of their behavior and function in a controlled, compact setting. 🧠 From visualizing the real line as a circle to exploring the intricate world of ultrafilters and continuous functions, this course breaks down complex topics with clarity. Perfect for anyone looking to sharpen their topology skills and explore advanced mathematical ideas—don’t miss out on this essential learning experience! 🌟",
         mediumUrl: "",
         chapter:[ "Introduction", "A Start", "Bases of topologies", "Closed sets and closures", "Countability", "Sequences, weak T-axioms, and first countability", "Continuity and homeomorphisms", "Subspaces", "Finite products", "Stronger separation axioms", "Orders and omega_1", "The Axiom of Choice and Zorn's Lemma", "Metric spaces and metrizability", "Urysohn's Lemma", "Arbitrary products", "The Urysohn Metrization Theorem", "Compactness", "Tychonoff's Theorem, and some properties related to compactness", "Connectedness", "Compactifications"],
       }
@@ -184,6 +192,14 @@ function CoursePreview() {
        {lastSegment == 'PointSetTopology' && activeChapterIndex === 9 && (<StrongerSeparationAxioms/>)}
        {lastSegment == 'PointSetTopology' && activeChapterIndex === 10 && (<OrdersAndOmega/>)}
        {lastSegment == 'PointSetTopology' && activeChapterIndex === 11 && (<ZornsLemma/>)}
+       {lastSegment == 'PointSetTopology' && activeChapterIndex === 12 && (<MetricSpacesChapter/>)}
+       {lastSegment == 'PointSetTopology' && activeChapterIndex === 13 && (<UrysohnsLemma />)}
+       {lastSegment == 'PointSetTopology' && activeChapterIndex === 14 && (<TopologyChapter />)}
+       {lastSegment == 'PointSetTopology' && activeChapterIndex === 15 && (<UrysohnMetrizationTheorem/>)}
+       {lastSegment == 'PointSetTopology' && activeChapterIndex === 16 && (<Compactness/>)}
+       {lastSegment == 'PointSetTopology' && activeChapterIndex === 17 && (<TychonoffTheorem/>)}
+       {lastSegment == 'PointSetTopology' && activeChapterIndex === 18 && (<Connectedness/>)}
+       {lastSegment == 'PointSetTopology' && activeChapterIndex === 19 && (<CompactificationsPage/>)}
 
        </div>
 
